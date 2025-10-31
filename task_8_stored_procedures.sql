@@ -1,3 +1,10 @@
+-- ==========================================
+-- Task 8: Stored Procedures and Functions
+-- Objective: Modularize SQL logic for reuse
+-- ==========================================
+
+-- Created a sample database
+DROP DATABASE IF EXISTS e_commerce;
 CREATE DATABASE e_commerce;
 USE e_commerce;
 
@@ -47,7 +54,7 @@ DELIMITER ;
 
 CALL GetCustomerTotalSpent(1);
 
--- Step 4: Create a Function
+-- Step 4: Create a Function - GetDiscount
 DELIMITER $$
 
 CREATE FUNCTION GetDiscount(amount DECIMAL(10,2))
